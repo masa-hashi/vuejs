@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <label>名前：
+            <input type="text" v-model="name" />
+        </label>
+        <p>入力された値：{{upperName}}</p>
+    </div>
+    <script src="../lib/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+    <script src="../js/watcher.js"></script>   
+</body>
+</html>
