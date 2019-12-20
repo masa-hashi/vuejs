@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- Radio Button -->
+        <p>Radio Button</p>
+        <form>
+            <label for="dog">dog</label>
+            <input type="radio" id="dog" value="dog" v-model="pet" />
+            <br />
+            <label for="cat">cat</label>
+            <input type="radio" id="cat" value="cat" v-model="pet" />
+            <br />
+            <label for="other">other</label>
+            <input type="radio" id="other" value="other" v-model="pet" />
+            <br />
+        </form>
+        <div>Pet: {{pet}} </div>
+        <hr>
+        <!-- Check Box -->
+        <p>Check Box</p>
+        <form>
+            <label for="agree">同意する</label>
+            <input type="checkbox" id="agree" v-model="agree" />
+        </form>
+        <div>回答：{{agree}}</div>
+        <hr>
+        <!-- Check Box(Multiple) -->
+        <p>Check Box(Multiple)</p>
+        <form>
+            <label for="Windows">Windows</label>
+            <input type="checkbox" id="Windows" value="Windows" v-model="os" />
+            <label for="linux">Linux</label>
+            <input type="checkbox" id="Linux" value="Linux" v-model="os" />
+            <label for="mac">Mac</label>
+            <input type="checkbox" id="Mac" value="Mac" v-model="os" />
+        </form>
+        <div>回答：{{os}}</div>
+        <hr>
+        <!-- Select Box -->
+        <p>Select Box</p>
+        <form>
+            <select id="oss" v-model="oss">
+                <option value="">選択してください</option>
+                <option>Windows</option>
+                <option>Linux</option>
+                <option>Mac</option>
+            </select>
+        </form>
+        <p>回答：{{oss}}</p>
+        <hr>
+        <!-- Select Box(Multiple) -->
+        <p>Select Box(Multiple)</p>
+        <form>
+            <select id="os" v-model="os" multiple size="4">
+                <option value="">選択してください</option>
+                <option>Windows</option>
+                <option>Linux</option>
+                <option>Mac</option>
+            </select>
+        </form>
+        <p>回答：{{os}}</p>
+        <hr>
+        <!-- Object Bind -->
+        <label for="million">百万</label>
+        <input type="radio" id="million" v-model="unit" v-on:change="onchange" v-bind:value="{name: '百万', size: 1000000}" /><br />
+        <label for="billion">十億</label>
+        <input type="radio" id="billion" v-model="unit" v-on:change="onchange" v-bind:value="{name: '十億', size: 1000000000}" /><br />
+        <label for="trillion">一兆</label>
+        <input type="radio" id="trillion" v-model="unit" v-on:change="onchange" v-bind:value="{name: '一兆', size: 1000000000000}" /><br />
+        <p>{{val}}</p>
+        <hr>
+        <!-- ファイル入力 -->
+        <form>
+        <input ref="upfile" type="file" v-on:change="onchange" />
+        </form>
+        <div>{{message}}</div>
+    </div>
+    <script src="../lib/vue.js"></script>
+    <script src="../js/model_etc.js"></script>    
+</body>
+</html>
