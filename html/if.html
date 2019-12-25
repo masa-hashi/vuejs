@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <form>
+            <label for="show">表示／非表示</label>
+            <input type="checkbox" id="show" v-model="show" />
+        </form>
+        <div id="panel" v-if="show">
+            <h3>RSSフィードについて</h3>
+            <div>test...test...</div>
+        </div>
+    </div>
+    <script src="../lib/vue.js"></script>
+    <script src="../js/if.js"></script>   
+</body>
+</html>
