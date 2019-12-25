@@ -12,12 +12,9 @@
             <label for="show">表示／非表示</label>
             <input type="checkbox" id="show" v-model="show" />
         </form>
-        <div id="panel" v-if="show">
+        <div id="panel" v-show="show">
             <h3>RSSフィードについて</h3>
             <div>test...test...</div>
-        </div>
-        <div id="panel" v-else="show">
-            非表示
         </div>
     </div>
     <script src="../lib/vue.js"></script>
