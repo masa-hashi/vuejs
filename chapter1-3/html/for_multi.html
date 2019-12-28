@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <template v-for="s in songs">
+            <header>{{s.title}}</header>
+            <div>{{s.lyrics}}</div>
+            <footer>{{s.composer}} 作曲</footer>
+        </template>
+    </div>
+</body>
+<script src="../lib/vue.js"></script>
+<script src="../js/for_multi.js"></script>
+</html>
