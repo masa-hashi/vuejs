@@ -11,7 +11,7 @@ Vue.component('my-book', {
     },
     template: `
     <div>
-        <slot>{{book.title}} ({{book.price}})</slot>
+        <slot v-bind:book="book">{{book.title}} ({{book.price}})</slot>
     </div>`
 });
 
