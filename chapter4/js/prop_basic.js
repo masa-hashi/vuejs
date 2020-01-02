@@ -1,5 +1,10 @@
 Vue.component('my-hello', {
-    props: ['yourName'],
+    props: {
+        yourName: {
+            type: String,
+            required: true
+        }
+    },
     template: `<div>こんにちわ、{{yourName}}さん！</div>`
 })
 
