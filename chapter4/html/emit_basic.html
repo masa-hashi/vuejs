@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>現在値：{{current}}</p>
+        <my-counter step="1" v-on:plus="onplus"></my-counter>
+        <my-counter step="2" v-on:plus="onplus"></my-counter>
+        <my-counter step="-1" v-on:plus="onplus"></my-counter>
+    </div>
+</body>
+<script src="../lib/vue.js"></script>
+<script src="../js/emit_basic.js"></script>
+</html>
