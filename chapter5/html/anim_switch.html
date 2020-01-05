@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/anim_switch.css"/>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="切り替え" v-on:click="onclick" />
+        <transition>
+            <div class="panel" v-bind:key="id">
+                {{ panels[id]}}
+            </div>
+        </transition>
+    </div>
+</body>
+<script src="../lib/vue.js"></script>
+<script src="../js/anim_switch.js"></script>
+</html>
