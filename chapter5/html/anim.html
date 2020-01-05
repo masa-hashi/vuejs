@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/anim.css" />
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="表示/非表示" v-on:click="onclick" />
+        <transition>
+            <div id="panel" v-show="flag">WINGSプロジェクトで一緒に働きましょうか？
+                ただいまメンバ募集中です。
+            </div>
+        </transition>
+    </div>
+</body>
+<script src="../lib/vue.js"></script>
+<script src="../js/anim.js"></script>
+</html>
