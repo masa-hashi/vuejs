@@ -21,5 +21,8 @@ new Vue({
             });
             this.todo = '';
         },
+        onsort: function() {
+            this.items.sort();
+        }
     }
 });
