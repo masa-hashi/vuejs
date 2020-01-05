@@ -3,8 +3,20 @@ Vue.component('my-input', {
     template: `<label>
     名前：
     <input
-        type="text" v-bind:value="value" v-on:input="$emit('input', $event.target.value)" />
-        </label>`
+        type="text" v-model="internalValue" />
+        </label>`,
+    computed: {
+        internalValue: {
+            get() {
+                return this.value;
+            },
+            set(newValue) {
+                if (this.value !== newValue) {
+                    this.$emit('input', newValue);
+                }
+            }
+        }
+    },
 });
 
 new Vue({
